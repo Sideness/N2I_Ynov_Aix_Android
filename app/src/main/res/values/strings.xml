@@ -4,6 +4,9 @@
     <string name="btMap">Carte</string>
     <string name="btInfos">Informations</string>
     <string name="btTranslation">Traductions</string>
+    <string name="franceFlagAction">French flag</string>
+    <string name="iranFlagAction">Iranian flag</string>
+    <string name="saudiFlagAction">Saudi flag</string>
 
     <string name="tvSetBlindMode">Êtes-vous malvoyant ?</string>
     <string name="tvSetNormalMode">Moi ? Je vois bien mamène !</string>
