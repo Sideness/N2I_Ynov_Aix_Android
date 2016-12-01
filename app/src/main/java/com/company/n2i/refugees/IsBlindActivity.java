@@ -20,18 +20,20 @@ public class IsBlindActivity extends AppCompatActivity {
         lnBlindMode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO setglobal variable for blind mode
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
+                Intent returnIntent = new Intent();
+                returnIntent.putExtra("result",true);
+                setResult(MainActivity.RESULT_OK,returnIntent);
+                finish();
             }
         });
 
         lnNormalMode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO setglobal variable for blind mode
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
+                Intent returnIntent = new Intent();
+                returnIntent.putExtra("result",false);
+                setResult(MainActivity.RESULT_OK,returnIntent);
+                finish();
             }
         });
     }
