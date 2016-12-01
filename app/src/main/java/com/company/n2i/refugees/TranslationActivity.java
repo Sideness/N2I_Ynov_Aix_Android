@@ -40,10 +40,8 @@ public class TranslationActivity extends AppCompatActivity {
 
                     }
                 });*/
-
                 alertadd.show();
             }
-
         });
 
         destination_flag_button = (ImageButton) findViewById(R.id.destination_language_flag);
