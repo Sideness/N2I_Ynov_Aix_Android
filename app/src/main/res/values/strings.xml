@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Refugees</string>
+
+    <string name="btMap">Carte</string>
+    <string name="btInfos">Informations</string>
+    <string name="btTranslation">Traductions</string>
 </resources>
