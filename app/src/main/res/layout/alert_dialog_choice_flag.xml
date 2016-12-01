@@ -6,27 +6,29 @@
     <LinearLayout android:layout_weight="1" android:layout_height="fill_parent" android:layout_width="fill_parent">
         <ImageButton android:layout_width="wrap_content"
             android:id="@+id/alert_french_flag"
-            android:layout_height="wrap_content"
-            android:background="@drawable/french_flag" />
-    </LinearLayout>
-    <LinearLayout android:layout_weight="1" android:layout_height="fill_parent" android:layout_width="fill_parent"
-        android:weightSum="1">
-        <ImageButton android:layout_width="wrap_content"
-            android:id="@+id/alert_uk_flag"
-            android:layout_height="wrap_content"
-            android:background="@drawable/uk_flag"
-            android:layout_weight="0.36" />
+            android:layout_height="fill_parent"
+            android:background="@drawable/french_flag"
+        android:layout_weight="1" />
     </LinearLayout>
     <LinearLayout android:layout_weight="1" android:layout_height="fill_parent" android:layout_width="fill_parent">
-        <ImageButton android:layout_width="wrap_content"
+        <ImageButton android:layout_width="fill_parent"
+            android:id="@+id/alert_uk_flag"
+            android:layout_height="fill_parent"
+            android:background="@drawable/uk_flag"
+            android:layout_weight="1" />
+    </LinearLayout>
+    <LinearLayout android:layout_weight="1" android:layout_height="fill_parent" android:layout_width="fill_parent">
+        <ImageButton android:layout_width="fill_parent"
             android:id="@+id/alert_saudi_flag"
-            android:layout_height="wrap_content"
-            android:background="@drawable/saudi_flag" />
+            android:layout_height="fill_parent"
+            android:background="@drawable/saudi_flag"
+            android:layout_weight="1" />
     </LinearLayout>
     <LinearLayout android:layout_weight="1" android:layout_height="fill_parent" android:layout_width="fill_parent">
         <ImageButton android:layout_width="wrap_content"
             android:id="@+id/alert_iran_flag"
-            android:layout_height="wrap_content"
-            android:background="@drawable/iran_flag" />
+            android:layout_height="fill_parent"
+            android:background="@drawable/iran_flag"
+            android:layout_weight="1" />
     </LinearLayout>
 </LinearLayout>
