@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- "Mark Favorite", should appear as action button if possible -->
+    <item
+        android:id="@+id/action_french_flag"
+        android:icon="@drawable/french_flag"
+        android:title="@string/franceFlagAction"
+        app:showAsAction="always"/>
+
+    <!-- Settings, should always be in the overflow -->
+    <item android:id="@+id/action_iran_flag"
+        android:title="@string/iranFlagAction"
+        android:icon="@drawable/iran_flag"
+        app:showAsAction="always"/>
+
+    <!-- Settings, should always be in the overflow -->
+    <item android:id="@+id/action_saudi_flag"
+        android:title="@string/saudiFlagAction"
+        android:icon="@drawable/saudi_flag"
+        app:showAsAction="always"/>
+</menu>
