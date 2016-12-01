@@ -2,13 +2,17 @@ package com.company.n2i.refugees;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -77,13 +81,41 @@ public class MainActivity extends AppCompatActivity {
 
         // Réalisation une action en fonction du drapeau cliqué
         if (id == R.id.action_french_flag) {
-            // fucntion();
+            Resources res = getApplicationContext().getResources();
+            // Change locale settings in the app.
+            DisplayMetrics dm = res.getDisplayMetrics();
+            android.content.res.Configuration conf = res.getConfiguration();
+            conf.locale = new Locale("fr");
+            res.updateConfiguration(conf, dm);
+            Toast.makeText(getApplicationContext(), "fr", Toast.LENGTH_SHORT).show();
+            Intent intent = getIntent();
+            finish();
+            startActivity(intent);
         }
         else if (id == R.id.action_iran_flag) {
-            // fucntion();
+            Resources res = getApplicationContext().getResources();
+            // Change locale settings in the app.
+            DisplayMetrics dm = res.getDisplayMetrics();
+            android.content.res.Configuration conf = res.getConfiguration();
+            conf.locale = new Locale("fa");
+            res.updateConfiguration(conf, dm);
+            Toast.makeText(getApplicationContext(), "fa", Toast.LENGTH_SHORT).show();
+            Intent intent = getIntent();
+            finish();
+            startActivity(intent);
+
         }
         else if (id == R.id.action_saudi_flag) {
-            // fucntion();
+            Resources res = getApplicationContext().getResources();
+            // Change locale settings in the app.
+            DisplayMetrics dm = res.getDisplayMetrics();
+            android.content.res.Configuration conf = res.getConfiguration();
+            conf.locale = new Locale("ar");
+            res.updateConfiguration(conf, dm);
+            Toast.makeText(getApplicationContext(), "ar", Toast.LENGTH_SHORT).show();
+            Intent intent = getIntent();
+            finish();
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);
