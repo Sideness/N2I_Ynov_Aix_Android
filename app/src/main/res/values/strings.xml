@@ -4,4 +4,7 @@
     <string name="btMap">Carte</string>
     <string name="btInfos">Informations</string>
     <string name="btTranslation">Traductions</string>
+
+    <string name="tvSetBlindMode">Êtes-vous malvoyant ?</string>
+    <string name="tvSetNormalMode">Moi ? Je vois bien mamène !</string>
 </resources>
