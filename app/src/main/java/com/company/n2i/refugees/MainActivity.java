@@ -75,11 +75,15 @@ public class MainActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
+        // Réalisation une action en fonction du drapeau cliqué
         if (id == R.id.action_french_flag) {
             // fucntion();
-            /*Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
-            startActivity(intent);*/
+        }
+        else if (id == R.id.action_iran_flag) {
+            // fucntion();
+        }
+        else if (id == R.id.action_saudi_flag) {
+            // fucntion();
         }
 
         return super.onOptionsItemSelected(item);
