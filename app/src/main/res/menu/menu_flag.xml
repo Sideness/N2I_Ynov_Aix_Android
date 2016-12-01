@@ -9,6 +9,11 @@
         android:title="@string/franceFlagAction"
         app:showAsAction="always"/>
 
+    <item android:id="@+id/action_uk_flag"
+        android:title="@string/ukFlagAction"
+        android:icon="@drawable/uk_flag"
+        app:showAsAction="always"/>
+
     <!-- Settings, should always be in the overflow -->
     <item android:id="@+id/action_iran_flag"
         android:title="@string/iranFlagAction"

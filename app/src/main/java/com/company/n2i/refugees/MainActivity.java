@@ -117,6 +117,18 @@ public class MainActivity extends AppCompatActivity {
             finish();
             startActivity(intent);
         }
+        else if (id == R.id.action_uk_flag) {
+            Resources res = getApplicationContext().getResources();
+            // Change locale settings in the app.
+            DisplayMetrics dm = res.getDisplayMetrics();
+            android.content.res.Configuration conf = res.getConfiguration();
+            conf.locale = new Locale("en");
+            res.updateConfiguration(conf, dm);
+            Toast.makeText(getApplicationContext(), "en", Toast.LENGTH_SHORT).show();
+            Intent intent = getIntent();
+            finish();
+            startActivity(intent);
+        }
 
         return super.onOptionsItemSelected(item);
     }
