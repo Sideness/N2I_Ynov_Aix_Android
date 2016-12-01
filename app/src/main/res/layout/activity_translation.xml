@@ -18,20 +18,32 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
-        <ImageView
-            android:id="@+id/french_flag"
-            android:layout_width="50dip"
-            android:layout_height="50dip"
-            android:src="@drawable/french_flag"
-            android:layout_weight="1"
-            />
-
-        <ImageView
-            android:id="@+id/saudi_flag"
-            android:layout_width="50dip"
-            android:layout_height="50dip"
-            android:src="@drawable/saudi_flag"
-            android:layout_weight="1"
-            />
+        <LinearLayout android:layout_weight="1" android:layout_height="fill_parent" android:layout_width="0dp">
+            <ImageView
+                android:id="@+id/french_flag"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:src="@drawable/french_flag"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+        <LinearLayout android:layout_weight="1" android:layout_height="fill_parent" android:layout_width="0dp">
+            <ImageView
+                android:id="@+id/fleche"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:src="@drawable/black_arrow"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+        <LinearLayout android:layout_weight="1" android:layout_height="fill_parent" android:layout_width="0dp">
+                <ImageView
+                    android:id="@+id/saudi_flag"
+                    android:layout_width="50dip"
+                    android:layout_height="50dip"
+                    android:src="@drawable/saudi_flag"
+                    android:layout_weight="1"
+                    />
+        </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
