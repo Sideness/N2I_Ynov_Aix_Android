@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Refugees</string>
+    <string name="btInfos">Infos</string>
+    <string name="btMap">Map</string>
+    <string name="btTranslation">Translate</string>
+    <string name="franceFlagAction">French flag</string>
+    <string name="iranFlagAction">Iranian flag</string>
+    <string name="saudiFlagAction">Saudi flag</string>
+    <string name="tvSetBlindMode">Are you visually impaired?</string>
+    <string name="tvSetNormalMode">I have a good view</string>
+</resources>

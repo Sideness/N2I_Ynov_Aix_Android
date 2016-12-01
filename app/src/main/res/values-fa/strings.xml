@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Refugees</string>
+    <string name="saudiFlagAction">پرچم عربستان</string>
+    <string name="iranFlagAction">پرچم ایران</string>
+    <string name="franceFlagAction">پرچم فرانسه</string>
+    <string name="tvSetBlindMode">آیا شما در دید مشکل؟</string>
+    <string name="tvSetNormalMode">من یک نمایش خوب</string>
+    <string name="btTranslation">ترجمه</string>
+    <string name="btMap">نقشه</string>
+    <string name="btInfos">اطلاعات</string>
+</resources>

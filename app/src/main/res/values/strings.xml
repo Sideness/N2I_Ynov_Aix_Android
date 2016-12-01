@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Refugees</string>
+    <string name="app_name" translatable="false">Refugees</string>
 
     <string name="btMap">Carte</string>
     <string name="btInfos">Informations</string>
