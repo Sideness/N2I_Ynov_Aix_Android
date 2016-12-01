@@ -13,37 +13,31 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="100px"
+        android:layout_height="50dip"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
         <LinearLayout android:layout_weight="1" android:layout_height="fill_parent" android:layout_width="0dp">
-            <ImageView
-                android:id="@+id/french_flag"
-                android:layout_width="50dip"
-                android:layout_height="50dip"
-                android:src="@drawable/french_flag"
-                android:layout_weight="1"
-                />
+            <ImageButton android:layout_width="wrap_content"
+                android:id="@+id/native_language_flag"
+                android:layout_height="wrap_content"
+                android:background="@drawable/french_flag" />
         </LinearLayout>
         <LinearLayout android:layout_weight="1" android:layout_height="fill_parent" android:layout_width="0dp">
             <ImageView
                 android:id="@+id/fleche"
-                android:layout_width="50dip"
-                android:layout_height="50dip"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
                 android:src="@drawable/black_arrow"
                 android:layout_weight="1"
                 />
         </LinearLayout>
         <LinearLayout android:layout_weight="1" android:layout_height="fill_parent" android:layout_width="0dp">
-                <ImageView
-                    android:id="@+id/saudi_flag"
-                    android:layout_width="50dip"
-                    android:layout_height="50dip"
-                    android:src="@drawable/saudi_flag"
-                    android:layout_weight="1"
-                    />
+                <ImageButton android:layout_width="wrap_content"
+                    android:id="@+id/destination_language_flag"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/saudi_flag" />
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
