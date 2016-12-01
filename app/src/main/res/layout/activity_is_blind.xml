@@ -12,6 +12,7 @@
     tools:context="com.company.n2i.refugees.IsBlindActivity">
 
     <RelativeLayout
+        android:id="@+id/rlBlindMode"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/blindMode"
@@ -42,6 +43,7 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/rlNormalMode"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/normalMode"
