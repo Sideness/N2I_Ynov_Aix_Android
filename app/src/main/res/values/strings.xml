@@ -13,4 +13,8 @@
     <string name="tvSetNormalMode">Moi ? Je vois bien mamène !</string>
     <string name="title_activity_maps2" translatable="false">Map</string>
 
+    <string name="baseGretting">Bonjour je</string>
+    <string name="baseLocation">Où puis-je dormir ?</string>
+
+
 </resources>

@@ -40,4 +40,10 @@
                     android:background="@drawable/saudi_flag" />
         </LinearLayout>
     </LinearLayout>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent">
+
+    </ListView>
+
 </RelativeLayout>
