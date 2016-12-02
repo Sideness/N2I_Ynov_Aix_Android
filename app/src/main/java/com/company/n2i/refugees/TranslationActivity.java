@@ -3,6 +3,7 @@ package com.company.n2i.refugees;
 import android.content.DialogInterface;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
+import android.support.design.widget.SwipeDismissBehavior;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -42,6 +44,25 @@ public class TranslationActivity extends AppCompatActivity {
         getWindowManager().getDefaultDisplay().getMetrics(metrics);
         getWindowManager().getDefaultDisplay().getMetrics(metrics);
         Resources resources = new Resources(getAssets(), metrics, conf);
+        ImageButton imagebutton = (ImageButton)findViewById(R.id.native_language_flag);
+        switch (TranslationActivity.nativeLanguage){
+            case ("fr"):
+                imagebutton.setImageResource(R.drawable.french_flag);
+                break;
+            case ("en"):
+                imagebutton.setImageResource(R.drawable.uk_flag);
+                break;
+            case ("fa"):
+                imagebutton.setImageResource(R.drawable.iran_flag);
+                break;
+            case  ("ar"):
+                imagebutton.setImageResource(R.drawable.saudi_flag);
+                break;
+        }
+        imagebutton.setAdjustViewBounds(true);
+        imagebutton = (ImageButton)findViewById(R.id.destination_language_flag);
+        imagebutton.setImageResource(R.drawable.uk_flag);
+        imagebutton.setAdjustViewBounds(true);
         final String[] valuesDefault = new String[] {
                 resources.getString(R.string.baseHelp),
                 resources.getString(R.string.baseTransportation),
