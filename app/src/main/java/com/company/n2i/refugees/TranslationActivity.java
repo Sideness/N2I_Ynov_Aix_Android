@@ -162,6 +162,15 @@ public class TranslationActivity extends AppCompatActivity {
                 Toast.makeText(getBaseContext(), Traduction , Toast.LENGTH_LONG).show();
             }
         });
+        list.setOnLongClickListener(new android.view.View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                String item = ((TextView)v).getText().toString();
+                TextToSpeechHelper.getInstance().say(item, getApplicationContext());
+                return false;
+            }
+
+        });
     }
 
     public void french(View v){
