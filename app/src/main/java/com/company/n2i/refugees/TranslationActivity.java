@@ -162,14 +162,14 @@ public class TranslationActivity extends AppCompatActivity {
                 Toast.makeText(getBaseContext(), Traduction , Toast.LENGTH_LONG).show();
             }
         });
-        list.setOnLongClickListener(new android.view.View.OnLongClickListener() {
+        list.setOnItemLongClickListener(new android.widget.AdapterView.OnItemLongClickListener() {
             @Override
-            public boolean onLongClick(View v) {
-                String item = ((TextView)v).getText().toString();
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                String item = ((TextView)view).getText().toString();
+                Toast.makeText(getBaseContext(), item , Toast.LENGTH_LONG).show();
                 TextToSpeechHelper.getInstance().say(item, getApplicationContext());
-                return false;
+                return true;
             }
-
         });
     }
 
