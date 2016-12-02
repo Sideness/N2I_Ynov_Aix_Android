@@ -24,4 +24,6 @@
     <string name="marker_food">Food</string>
     <string name="marker_sleep">Accommodation</string>
     <string name="marker_wifi">Wifi</string>
+    <string name="noDate">No date set</string>
+    <string name="textTrad">Write here to translate</string>
 </resources>

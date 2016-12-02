@@ -30,9 +30,9 @@
     <string name="marker_care">Soin</string>
     <string name="marker_food">Repas</string>
 
-    <string name="goToMap">Google Map</string>
+    <string name="goToMap" translatable="false">Google Map</string>
     <string name="noDate">Pas de date</string>
 
     <string name="textTrad">Ecrivez ici pour traduire</string>
-    <string name="title_activity_info_details">InfoDetailsActivity</string>
+    <string name="title_activity_info_details" translatable="false">InfoDetailsActivity</string>
 </resources>

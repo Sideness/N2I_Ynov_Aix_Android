@@ -24,4 +24,6 @@
     <string name="marker_food">غذا</string>
     <string name="marker_cloths">لباس</string>
     <string name="marker_care">مراقبت</string>
+    <string name="noDate">هیچ تاریخ</string>
+    <string name="textTrad">ارسال اینجا به ترجمه</string>
 </resources>

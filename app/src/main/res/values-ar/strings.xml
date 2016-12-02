@@ -24,4 +24,6 @@
     <string name="marker_food">وجبة</string>
     <string name="marker_sleep">الإقامة</string>
     <string name="marker_wifi">واي فاي</string>
+    <string name="textTrad">أكتب هنا لترجمة</string>
+    <string name="noDate">لا تاريخ</string>
 </resources>
