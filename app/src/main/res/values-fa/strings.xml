@@ -9,4 +9,9 @@
     <string name="btTranslation">ترجمه</string>
     <string name="btMap">نقشه</string>
     <string name="btInfos">اطلاعات</string>
+    <string name="baseHurt">من صدمه دیده</string>
+    <string name="baseTransportation">که در آن شما به من گرفتن هستند؟</string>
+    <string name="baseHelp">به من کمک کن!</string>
+    <string name="baseHallal">آیا حرام است؟</string>
+    <string name="baseFamilly">خانواده من کجاست؟</string>
 </resources>

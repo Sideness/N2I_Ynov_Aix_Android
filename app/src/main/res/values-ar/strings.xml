@@ -9,4 +9,9 @@
     <string name="tvSetBlindMode">هل ضعاف البصر؟</string>
     <string name="tvSetNormalMode">لدي رؤية جيدة</string>
     <string name="saudiFlagAction">العلم السعودي</string>
+    <string name="baseFamilly">أين أسرتي؟</string>
+    <string name="baseHallal">ومن حلالا؟</string>
+    <string name="baseHelp">ساعدني</string>
+    <string name="baseHurt">أتألم</string>
+    <string name="baseTransportation">أين أنت أخذ مني؟</string>
 </resources>

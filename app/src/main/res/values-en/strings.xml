@@ -9,4 +9,9 @@
     <string name="saudiFlagAction">Saudi flag</string>
     <string name="tvSetBlindMode">Are you visually impaired?</string>
     <string name="tvSetNormalMode">I have a good view</string>
+    <string name="baseFamilly">Where\'s my family ?</string>
+    <string name="baseHallal">Is it halal?</string>
+    <string name="baseHelp">Help me !</string>
+    <string name="baseHurt">I am in pain</string>
+    <string name="baseTransportation">Where are you taking me ?</string>
 </resources>
