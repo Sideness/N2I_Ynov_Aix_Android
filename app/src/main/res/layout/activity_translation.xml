@@ -58,13 +58,27 @@
         android:layout_marginBottom="100dp">
     </ListView>
     <TextView
+        android:id="@+id/textTrad"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginBottom="190dp"
         android:text="@string/textTrad"
         android:layout_below="@+id/traductionList" />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/traductionList"/>
+    <LinearLayout android:orientation="horizontal" android:layout_weight="2" android:layout_height="fill_parent" android:layout_width="fill_parent" android:layout_below="@id/traductionList">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+        <ImageButton android:layout_width="wrap_content"
+            android:id="@+id/arrowTranslate"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_forward"
+            android:layout_weight="1"
+            android:scaleY="2"
+            android:scaleX="5"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            />
+    </LinearLayout>
 </RelativeLayout>
