@@ -29,4 +29,6 @@
     <string name="marker_sleep">Hebergement</string>
     <string name="marker_care">Soin</string>
     <string name="marker_food">Repas</string>
+
+    <string name="textTrad">Ecrivez ici pour traduire</string>
 </resources>
