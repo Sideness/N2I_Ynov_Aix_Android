@@ -15,8 +15,10 @@ import android.widget.Toast;
 public class ListTraduction extends AppCompatActivity {
     ListView listView ;
 
+
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_translation);
 
@@ -24,14 +26,12 @@ public class ListTraduction extends AppCompatActivity {
         listView = (ListView) findViewById(R.id.traductionList);
 
         // Defined Array values to show in ListView
-        String[] values = new String[] { "Android List View",
-                "Adapter implementation",
-                "Simple List View In Android",
-                "Create List View Android",
-                "Android Example",
-                "List View Source Code",
-                "List View Array Adapter",
-                "Android Example List View"
+        String[] values = new String[] {
+                getResources().getString(R.string.baseHelp),
+                getResources().getString(R.string.baseTransportation),
+                getResources().getString(R.string.baseHurt),
+                getResources().getString(R.string.baseFamilly),
+                getResources().getString(R.string.baseHallal),
         };
 
         // Define a new Adapter
