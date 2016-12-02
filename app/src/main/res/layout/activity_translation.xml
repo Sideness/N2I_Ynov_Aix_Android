@@ -66,6 +66,7 @@
         android:layout_below="@+id/traductionList" />
     <LinearLayout android:orientation="horizontal" android:layout_weight="2" android:layout_height="fill_parent" android:layout_width="fill_parent" android:layout_below="@id/traductionList">
         <EditText
+            android:id="@+id/editTextToTranslate"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -79,6 +80,7 @@
             android:scaleX="5"
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
+            android:onClick="goTranslate"
             />
     </LinearLayout>
 </RelativeLayout>

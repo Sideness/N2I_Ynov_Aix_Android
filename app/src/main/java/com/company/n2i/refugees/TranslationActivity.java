@@ -12,12 +12,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
+
 
 import java.util.Locale;
 import java.util.StringTokenizer;
@@ -233,6 +235,12 @@ public class TranslationActivity extends AppCompatActivity {
         this.dialog.dismiss();
     }
 
+    public void goTranslate(View v){
+        EditText et= (EditText) findViewById(R.id.editTextToTranslate);
+        String textToTranslate = et.getText().toString();
+        TextToSpeechHelper.getInstance().say(textToTranslate, getApplicationContext());
+
+    }
 
 
     protected void addListenerOnFlagButton() {
