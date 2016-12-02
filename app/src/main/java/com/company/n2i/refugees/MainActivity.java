@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     static final int IS_BLIND_REQUEST = 1;  // The request code
 
-    private Boolean isBlind = false;
+    public static Boolean isBlind = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

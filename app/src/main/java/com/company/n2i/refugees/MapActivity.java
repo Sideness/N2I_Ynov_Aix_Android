@@ -17,9 +17,12 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.Locale;
+
+import static com.company.n2i.refugees.MainActivity.isBlind;
 
 public class MapActivity extends AppCompatActivity implements OnMapReadyCallback {
 
@@ -49,8 +52,11 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-// Réalisation une action en fonction du drapeau cliqué
+        // Réalisation une action en fonction du drapeau cliqué
         if (id == R.id.action_french_flag) {
+            if(isBlind){
+                TextToSpeechHelper.getInstance().say(getString(R.string.languageFrench), getApplicationContext());
+            }
             Resources res = getApplicationContext().getResources();
             // Change locale settings in the app.
             DisplayMetrics dm = res.getDisplayMetrics();
@@ -63,6 +69,9 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
             startActivity(intent);
         }
         else if (id == R.id.action_iran_flag) {
+            if(isBlind){
+                TextToSpeechHelper.getInstance().say(getString(R.string.languagePersan), getApplicationContext());
+            }
             Resources res = getApplicationContext().getResources();
             // Change locale settings in the app.
             DisplayMetrics dm = res.getDisplayMetrics();
@@ -76,6 +85,9 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 
         }
         else if (id == R.id.action_saudi_flag) {
+            if(isBlind){
+                TextToSpeechHelper.getInstance().say(getString(R.string.languageArabic), getApplicationContext());
+            }
             Resources res = getApplicationContext().getResources();
             // Change locale settings in the app.
             DisplayMetrics dm = res.getDisplayMetrics();
@@ -88,6 +100,9 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
             startActivity(intent);
         }
         else if (id == R.id.action_uk_flag) {
+            if(isBlind){
+                TextToSpeechHelper.getInstance().say(getString(R.string.languageEnglish), getApplicationContext());
+            }
             Resources res = getApplicationContext().getResources();
             // Change locale settings in the app.
             DisplayMetrics dm = res.getDisplayMetrics();
@@ -113,44 +128,90 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                 .position(paris)
                 .title("Resto du coeur - Tour Eiffel")
                 .snippet(getString(R.string.marker_food))
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("marker_nourriture",200,200))));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("marker_nourriture",300,300))));
 
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(48.846432, 2.295477))
+                .title("Le Café du Commerce")
+                .snippet(getString(R.string.marker_food))
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("marker_nourriture",300,300))));
+
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(48.860318, 2.305992))
+                .title("Chez L'Ami Jean")
+                .snippet(getString(R.string.marker_food))
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("marker_nourriture",300,300))));
+
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(48.847681, 2.299232))
+                .title("Carrefour City Paris ")
+                .snippet(getString(R.string.marker_food))
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("marker_nourriture",300,300))));
 
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(48.8453200, 2.3149500))
                 .title("Centre Hospitalier Universitaire - Necker")
                 .snippet(getString(R.string.marker_care))
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("marker_soin",200,200))));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("marker_soin",300,300))));
 
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(48.837408, 2.338886))
                 .title("Centre Hospitalier Universitaire - Cochin")
                 .snippet(getString(R.string.marker_care))
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("marker_soin",200,200))));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("marker_soin",300,300))));
+
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(48.84574, 2.298492))
+                .title("Foyer de Grenelle")
+                .snippet(getString(R.string.marker_sleep))
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("marker_lit",300,300))));
+
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(48.850936, 2.29655))
+                .title("Paroisse Saint Léon")
+                .snippet(getString(R.string.marker_sleep))
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("marker_lit",300,300))));
 
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(48.842036, 2.322128))
                 .title("Centre d'accueil - Tour Montparnasse")
                 .snippet(getString(R.string.marker_sleep))
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("marker_lit",200,200))));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("marker_lit",300,300))));
 
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(48.840193, 2.314575))
                 .title("Freemoos")
                 .snippet(getString(R.string.marker_cloths))
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("marker_vetements",200,200))));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("marker_vetements",300,300))));
+
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(48.848408, 2.300938))
+                .title("Little Market")
+                .snippet(getString(R.string.marker_cloths))
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("marker_vetements",300,300))));
 
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(48.844483, 2.324767))
                 .title("McDonald's - Rue de rennes")
                 .snippet(getString(R.string.marker_wifi))
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("marker_wifi",200,200))));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("marker_wifi",300,300))));
 
         mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(48.841235, 2.319907))
                 .title("Fnac Paris Gare Montparnasse")
                 .snippet(getString(R.string.marker_wifi))
-                .icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("marker_wifi",200,200))));
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("marker_wifi",300,300))));
+
+        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener()
+        {
+            @Override
+            public boolean onMarkerClick(Marker arg0) {
+                if(isBlind){
+                    TextToSpeechHelper.getInstance().say(arg0.getSnippet(), getApplicationContext());
+                }
+                return false;
+            }
+        });
 
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(paris,15));
         // Zoom in, animating the camera.

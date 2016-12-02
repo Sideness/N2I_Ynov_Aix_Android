@@ -11,6 +11,8 @@ import android.widget.Toast;
 
 import java.util.Locale;
 
+import static com.company.n2i.refugees.MainActivity.isBlind;
+
 public class InformationActivity extends AppCompatActivity {
 
     @Override
@@ -33,8 +35,11 @@ public class InformationActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-// Réalisation une action en fonction du drapeau cliqué
+        // Réalisation une action en fonction du drapeau cliqué
         if (id == R.id.action_french_flag) {
+            if(isBlind){
+                TextToSpeechHelper.getInstance().say(getString(R.string.languageFrench), getApplicationContext());
+            }
             Resources res = getApplicationContext().getResources();
             // Change locale settings in the app.
             DisplayMetrics dm = res.getDisplayMetrics();
@@ -47,6 +52,9 @@ public class InformationActivity extends AppCompatActivity {
             startActivity(intent);
         }
         else if (id == R.id.action_iran_flag) {
+            if(isBlind){
+                TextToSpeechHelper.getInstance().say(getString(R.string.languagePersan), getApplicationContext());
+            }
             Resources res = getApplicationContext().getResources();
             // Change locale settings in the app.
             DisplayMetrics dm = res.getDisplayMetrics();
@@ -57,8 +65,12 @@ public class InformationActivity extends AppCompatActivity {
             Intent intent = getIntent();
             finish();
             startActivity(intent);
+
         }
         else if (id == R.id.action_saudi_flag) {
+            if(isBlind){
+                TextToSpeechHelper.getInstance().say(getString(R.string.languageArabic), getApplicationContext());
+            }
             Resources res = getApplicationContext().getResources();
             // Change locale settings in the app.
             DisplayMetrics dm = res.getDisplayMetrics();
@@ -71,6 +83,9 @@ public class InformationActivity extends AppCompatActivity {
             startActivity(intent);
         }
         else if (id == R.id.action_uk_flag) {
+            if(isBlind){
+                TextToSpeechHelper.getInstance().say(getString(R.string.languageEnglish), getApplicationContext());
+            }
             Resources res = getApplicationContext().getResources();
             // Change locale settings in the app.
             DisplayMetrics dm = res.getDisplayMetrics();
