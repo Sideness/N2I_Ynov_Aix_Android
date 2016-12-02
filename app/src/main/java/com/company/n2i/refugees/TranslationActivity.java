@@ -1,16 +1,21 @@
 package com.company.n2i.refugees;
 
 import android.content.DialogInterface;
+import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.Toast;
+
+import java.util.Locale;
 
 public class TranslationActivity extends AppCompatActivity {
 
@@ -24,7 +29,60 @@ public class TranslationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_translation);
         addListenerOnFlagButton();
-        new ListTraduction( );
+        //new ListTraduction( )
+        Resources res = getApplicationContext().getResources();
+        android.content.res.Configuration conf = res.getConfiguration();
+        Locale bufferLocale = conf.locale;
+        String[] valuesDefault = new String[] {
+                getResources().getString(R.string.baseHelp),
+                getResources().getString(R.string.baseTransportation),
+                getResources().getString(R.string.baseHurt),
+                getResources().getString(R.string.baseFamilly),
+                getResources().getString(R.string.baseHallal),
+        };
+        conf.locale = new Locale("fr");
+        String[] valuesFr = new String[] {
+                getResources().getString(R.string.baseHelp),
+                getResources().getString(R.string.baseTransportation),
+                getResources().getString(R.string.baseHurt),
+                getResources().getString(R.string.baseFamilly),
+                getResources().getString(R.string.baseHallal),
+        };
+        conf.locale = new Locale("fa");
+        String[] valuesFa = new String[] {
+                getResources().getString(R.string.baseHelp),
+                getResources().getString(R.string.baseTransportation),
+                getResources().getString(R.string.baseHurt),
+                getResources().getString(R.string.baseFamilly),
+                getResources().getString(R.string.baseHallal),
+        };
+        conf.locale = new Locale("ar");
+        String[] valuesAr = new String[] {
+                getResources().getString(R.string.baseHelp),
+                getResources().getString(R.string.baseTransportation),
+                getResources().getString(R.string.baseHurt),
+                getResources().getString(R.string.baseFamilly),
+                getResources().getString(R.string.baseHallal),
+        };
+        conf.locale = new Locale("en");
+        String[] valuesUk = new String[] {
+                getResources().getString(R.string.baseHelp),
+                getResources().getString(R.string.baseTransportation),
+                getResources().getString(R.string.baseHurt),
+                getResources().getString(R.string.baseFamilly),
+                getResources().getString(R.string.baseHallal),
+        };
+        conf.locale = bufferLocale;
+        ArrayAdapter<String> adapter= new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, valuesDefault);
+        final ListView list = (ListView) findViewById(R.id.traductionList);
+        list.setAdapter(adapter);
+        list.setOnItemClickListener(new android.widget.AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String item = list.getItemAtPosition(position).toString();
+
+            }
+        });
     }
 
     public void french(View v){
