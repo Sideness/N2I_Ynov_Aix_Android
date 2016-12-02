@@ -73,15 +73,15 @@ public class CustomAdapter extends ArrayAdapter<Topic> {
             holder.title.setText(_lTopic.get(position).getTitre());
             holder.description.setText(_lTopic.get(position).getContenu());
 
-            if(_lTopic.get(position).getCategorieFrench() == ""){
+            if(_lTopic.get(position).getCategorieFrench().startsWith("Heb")){
                 holder.imageCategorie.setImageResource(R.drawable.ic_bed);
             }else if(_lTopic.get(position).getCategorieFrench().startsWith("Nou")){
                 holder.imageCategorie.setImageResource(R.drawable.ic_food);
             }else if(_lTopic.get(position).getCategorieFrench().startsWith("Vêt")){
                 holder.imageCategorie.setImageResource(R.drawable.ic_cloths);
-            }else if(_lTopic.get(position).getCategorieFrench() == ""){
+            }else if(_lTopic.get(position).getCategorieFrench().startsWith("Soi")){
                 holder.imageCategorie.setImageResource(R.drawable.ic_obamacare);
-            }else if(_lTopic.get(position).getCategorieFrench() == ""){
+            }else if(_lTopic.get(position).getCategorieFrench().startsWith("Wif")){
                 holder.imageCategorie.setImageResource(R.drawable.ic_wifi);
             }
 
