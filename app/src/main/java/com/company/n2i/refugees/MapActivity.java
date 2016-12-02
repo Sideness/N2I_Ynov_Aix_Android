@@ -2,8 +2,10 @@ package com.company.n2i.refugees;
 
 import android.content.Intent;
 import android.content.res.Resources;
-import android.support.v7.app.AppCompatActivity;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -13,6 +15,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -104,9 +107,61 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        // Tour Eiffel
+        LatLng paris = new LatLng(48.858093, 2.294694);
+        mMap.addMarker(new MarkerOptions()
+                .position(paris)
+                .title("Resto du coeur - Tour Eiffel")
+                .snippet(getString(R.string.marker_food))
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("marker_nourriture",200,200))));
+
+
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(48.8453200, 2.3149500))
+                .title("Centre Hospitalier Universitaire - Necker")
+                .snippet(getString(R.string.marker_care))
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("marker_soin",200,200))));
+
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(48.837408, 2.338886))
+                .title("Centre Hospitalier Universitaire - Cochin")
+                .snippet(getString(R.string.marker_care))
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("marker_soin",200,200))));
+
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(48.842036, 2.322128))
+                .title("Centre d'accueil - Tour Montparnasse")
+                .snippet(getString(R.string.marker_sleep))
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("marker_lit",200,200))));
+
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(48.840193, 2.314575))
+                .title("Freemoos")
+                .snippet(getString(R.string.marker_cloths))
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("marker_vetements",200,200))));
+
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(48.844483, 2.324767))
+                .title("McDonald's - Rue de rennes")
+                .snippet(getString(R.string.marker_wifi))
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("marker_wifi",200,200))));
+
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(48.841235, 2.319907))
+                .title("Fnac Paris Gare Montparnasse")
+                .snippet(getString(R.string.marker_wifi))
+                .icon(BitmapDescriptorFactory.fromBitmap(resizeMapIcons("marker_wifi",200,200))));
+
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(paris,15));
+        // Zoom in, animating the camera.
+        googleMap.animateCamera(CameraUpdateFactory.zoomIn());
+        // Zoom out to zoom level 10, animating with a duration of 2 seconds.
+        googleMap.animateCamera(CameraUpdateFactory.zoomTo(15), 2000, null);
+    }
+
+    public Bitmap resizeMapIcons(String iconName, int width, int height){
+        Bitmap imageBitmap = BitmapFactory.decodeResource(getResources(),getResources().getIdentifier(iconName, "drawable", getPackageName()));
+        Bitmap resizedBitmap = Bitmap.createScaledBitmap(imageBitmap, width, height, false);
+        return resizedBitmap;
     }
 }
