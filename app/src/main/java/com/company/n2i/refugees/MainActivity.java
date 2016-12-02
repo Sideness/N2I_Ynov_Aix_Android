@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import java.util.Locale;
@@ -23,9 +24,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btMap = (Button)findViewById(R.id.btMap);
-        Button btInfos = (Button)findViewById(R.id.btInfos);
-        Button btTranslation = (Button)findViewById(R.id.btTranslation);
+        RelativeLayout btMap = (RelativeLayout)findViewById(R.id.btMap);
+        RelativeLayout btInfos = (RelativeLayout)findViewById(R.id.btInfos);
+        RelativeLayout btTranslation = (RelativeLayout)findViewById(R.id.btTranslation);
 
         btMap.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -17,22 +17,73 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <Button
+    <RelativeLayout
         android:id="@+id/btMap"
-        android:text="@string/btMap"
         android:layout_width="match_parent"
-        android:layout_height="50dp" />
+        android:layout_height="match_parent"
+        android:background="@color/blindMode"
+        android:layout_weight="1">
 
-    <Button
+        <TextView
+            android:id="@+id/tvMap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:text="@string/btMap"
+            android:textAlignment="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
         android:id="@+id/btInfos"
-        android:text="@string/btInfos"
         android:layout_width="match_parent"
-        android:layout_height="50dp" />
+        android:layout_height="match_parent"
+        android:background="@color/normalMode"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1">
 
-    <Button
+        <TextView
+            android:id="@+id/tvInfos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:text="@string/btInfos"
+            android:textAlignment="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
         android:id="@+id/btTranslation"
-        android:text="@string/btTranslation"
         android:layout_width="match_parent"
-        android:layout_height="50dp" />
+        android:layout_height="match_parent"
+        android:background="#13ADB5"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tvTranslations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:text="@string/btTranslation"
+            android:textAlignment="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
 
 </LinearLayout>
