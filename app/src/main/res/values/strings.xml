@@ -26,7 +26,7 @@
     <string name="languagePersan">Langue perse</string>
     <string name="marker_wifi">Wifi</string>
     <string name="marker_cloths">Vêtements</string>
-    <string name="marker_sleep">Repos</string>
+    <string name="marker_sleep">Hebergement</string>
     <string name="marker_care">Soin</string>
     <string name="marker_food">Repas</string>
 </resources>

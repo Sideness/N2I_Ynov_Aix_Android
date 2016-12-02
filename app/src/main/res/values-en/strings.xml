@@ -19,4 +19,9 @@
     <string name="languageEnglish">English language</string>
     <string name="languageFrench">French language</string>
     <string name="languagePersan">Persan language</string>
+    <string name="marker_care">Healthcare</string>
+    <string name="marker_cloths">Cloths</string>
+    <string name="marker_food">Food</string>
+    <string name="marker_sleep">Accommodation</string>
+    <string name="marker_wifi">Wifi</string>
 </resources>

@@ -19,4 +19,9 @@
     <string name="languageEnglish">"اللغة الإنجليزية "</string>
     <string name="languageFrench">اللغة الفرنسية</string>
     <string name="languagePersan">اللغة الفارسية</string>
+    <string name="marker_cloths">ملابس</string>
+    <string name="marker_care">رعاية</string>
+    <string name="marker_food">وجبة</string>
+    <string name="marker_sleep">الإقامة</string>
+    <string name="marker_wifi">واي فاي</string>
 </resources>
