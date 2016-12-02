@@ -57,7 +57,6 @@ public class InformationActivity extends AppCompatActivity {
             Intent intent = getIntent();
             finish();
             startActivity(intent);
-
         }
         else if (id == R.id.action_saudi_flag) {
             Resources res = getApplicationContext().getResources();
