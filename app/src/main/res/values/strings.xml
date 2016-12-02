@@ -19,5 +19,9 @@
     <string name="baseFamilly">Où est ma famille ?</string>
     <string name="baseHallal">C\'est hallal ?</string>
 
-
+    <string name="blindModeActivated">Mode malvoyant activé. Restez appuyé n\'importe où pour avoir un guidage vocal.</string>
+    <string name="languageFrench">Langue française</string>
+    <string name="languageEnglish">Langue anglaise</string>
+    <string name="languageArabic">Langue arabe</string>
+    <string name="languagePersan">Langue perse</string>
 </resources>

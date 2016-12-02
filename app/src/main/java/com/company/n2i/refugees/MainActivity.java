@@ -73,9 +73,11 @@ public class MainActivity extends AppCompatActivity {
         btMap.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
-                TextView tvBtMap = (TextView) findViewById(R.id.tvMap);
-                String toSay = new String(tvBtMap.getText().toString());
-                TextToSpeechHelper.getInstance().say(toSay, getApplicationContext());
+                if(isBlind){
+                    TextView tvBtMap = (TextView) findViewById(R.id.tvMap);
+                    String toSay = new String(tvBtMap.getText().toString());
+                    TextToSpeechHelper.getInstance().say(toSay, getApplicationContext());
+                }
                 return true;
             }
         });
@@ -83,9 +85,11 @@ public class MainActivity extends AppCompatActivity {
         btInfos.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
-                TextView tvBtInfos = (TextView) findViewById(R.id.tvInfos);
-                String toSay = new String(tvBtInfos.getText().toString());
-                TextToSpeechHelper.getInstance().say(toSay, getApplicationContext());
+                if(isBlind){
+                    TextView tvBtInfos = (TextView) findViewById(R.id.tvInfos);
+                    String toSay = new String(tvBtInfos.getText().toString());
+                    TextToSpeechHelper.getInstance().say(toSay, getApplicationContext());
+                }
                 return true;
             }
         });
@@ -93,9 +97,11 @@ public class MainActivity extends AppCompatActivity {
         btTranslation.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
-                TextView tvBtTranslation = (TextView) findViewById(R.id.tvTranslations);
-                String toSay = new String(tvBtTranslation.getText().toString());
-                TextToSpeechHelper.getInstance().say(toSay, getApplicationContext());
+                if(isBlind){
+                    TextView tvBtTranslation = (TextView) findViewById(R.id.tvTranslations);
+                    String toSay = new String(tvBtTranslation.getText().toString());
+                    TextToSpeechHelper.getInstance().say(toSay, getApplicationContext());
+                }
                 return true;
             }
         });
@@ -108,6 +114,9 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+
+
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -117,6 +126,9 @@ public class MainActivity extends AppCompatActivity {
 
         // Réalisation une action en fonction du drapeau cliqué
         if (id == R.id.action_french_flag) {
+            if(isBlind){
+                TextToSpeechHelper.getInstance().say(getString(R.string.languageFrench), getApplicationContext());
+            }
             Resources res = getApplicationContext().getResources();
             // Change locale settings in the app.
             DisplayMetrics dm = res.getDisplayMetrics();
@@ -129,6 +141,9 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
         else if (id == R.id.action_iran_flag) {
+            if(isBlind){
+                TextToSpeechHelper.getInstance().say(getString(R.string.languagePersan), getApplicationContext());
+            }
             Resources res = getApplicationContext().getResources();
             // Change locale settings in the app.
             DisplayMetrics dm = res.getDisplayMetrics();
@@ -142,6 +157,9 @@ public class MainActivity extends AppCompatActivity {
 
         }
         else if (id == R.id.action_saudi_flag) {
+            if(isBlind){
+                TextToSpeechHelper.getInstance().say(getString(R.string.languageArabic), getApplicationContext());
+            }
             Resources res = getApplicationContext().getResources();
             // Change locale settings in the app.
             DisplayMetrics dm = res.getDisplayMetrics();
@@ -154,6 +172,9 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
         else if (id == R.id.action_uk_flag) {
+            if(isBlind){
+                TextToSpeechHelper.getInstance().say(getString(R.string.languageEnglish), getApplicationContext());
+            }
             Resources res = getApplicationContext().getResources();
             // Change locale settings in the app.
             DisplayMetrics dm = res.getDisplayMetrics();

@@ -20,6 +20,8 @@ public class IsBlindActivity extends AppCompatActivity {
         lnBlindMode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String toSay = getString(R.string.blindModeActivated);
+                TextToSpeechHelper.getInstance().say(toSay, getApplicationContext());
                 Intent returnIntent = new Intent();
                 returnIntent.putExtra("result",true);
                 setResult(MainActivity.RESULT_OK,returnIntent);

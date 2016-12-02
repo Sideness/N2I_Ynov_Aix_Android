@@ -14,4 +14,9 @@
     <string name="baseHelp">به من کمک کن!</string>
     <string name="baseHallal">آیا حرام است؟</string>
     <string name="baseFamilly">خانواده من کجاست؟</string>
+    <string name="blindModeActivated">صری حالت اختلال را فعال کنید. فشار داده و نگه در هر نقطه به یک راهنمای صوتی.</string>
+    <string name="languagePersan">زبان فارسی</string>
+    <string name="languageFrench">زبان فرانسه</string>
+    <string name="languageEnglish">انگلیسی</string>
+    <string name="languageArabic">عربی</string>
 </resources>

@@ -14,4 +14,9 @@
     <string name="baseHelp">Help me !</string>
     <string name="baseHurt">I am in pain</string>
     <string name="baseTransportation">Where are you taking me ?</string>
+    <string name="blindModeActivated">Visually impaired mode activated. Long press anything on screen to get vocal assistance.</string>
+    <string name="languageArabic">Arabic language</string>
+    <string name="languageEnglish">English language</string>
+    <string name="languageFrench">French language</string>
+    <string name="languagePersan">Persan language</string>
 </resources>
