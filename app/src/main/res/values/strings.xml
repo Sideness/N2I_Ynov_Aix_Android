@@ -13,4 +13,11 @@
     <string name="tvSetNormalMode">Moi ? Je vois bien mamène !</string>
     <string name="title_activity_maps2" translatable="false">Map</string>
 
+    <string name="baseHelp">Aidez-moi</string>
+    <string name="baseTransportation">Où m'emmenez-vous ?</string>
+    <string name="baseHurt">J'ai mal</string>
+    <string name="baseFamilly">Où est ma famille ?</string>
+    <string name="baseHallal">C'est hallal ?</string>
+
+
 </resources>
