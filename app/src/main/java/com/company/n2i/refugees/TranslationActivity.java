@@ -1,6 +1,7 @@
 package com.company.n2i.refugees;
 
 import android.content.DialogInterface;
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,7 +15,7 @@ public class TranslationActivity extends AppCompatActivity {
 
     ImageButton native_flag_button;
     ImageButton destination_flag_button;
-
+    AlertDialog dialog;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,33 @@ public class TranslationActivity extends AppCompatActivity {
         addListenerOnFlagButton();
         //inflateAlertDialog();
     }
+
+    public void french(View v){
+        ImageButton imagebutton = (ImageButton)findViewById(R.id.native_language_flag);
+        imagebutton.setImageResource(R.drawable.french_flag);
+        imagebutton.setAdjustViewBounds(true);
+        this.dialog.dismiss();
+
+    }
+    public void uk(View v){
+        ImageButton imagebutton = (ImageButton)findViewById(R.id.native_language_flag);
+        imagebutton.setImageResource(R.drawable.uk_flag);
+        imagebutton.setAdjustViewBounds(true);
+        this.dialog.dismiss();
+    }
+    public void iran(View v){
+        ImageButton imagebutton = (ImageButton)findViewById(R.id.native_language_flag);
+        imagebutton.setImageResource(R.drawable.iran_flag);
+        imagebutton.setAdjustViewBounds(true);
+        this.dialog.dismiss();
+    }
+    public void saudi(View v){
+        ImageButton imagebutton = (ImageButton)findViewById(R.id.native_language_flag);
+        imagebutton.setImageResource(R.drawable.saudi_flag);
+        imagebutton.setAdjustViewBounds(true);
+        this.dialog.dismiss();
+    }
+
 
 
     protected void addListenerOnFlagButton() {
@@ -35,12 +63,13 @@ public class TranslationActivity extends AppCompatActivity {
                 LayoutInflater factory = LayoutInflater.from(TranslationActivity.this);
                 final View view = factory.inflate(R.layout.alert_dialog_choice_flag, null);
                 alertadd.setView(view);
+                dialog = alertadd.create();
                 /*alertadd.setNeutralButton("Here!", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dlg, int sumthin) {
 
                     }
                 });*/
-                alertadd.show();
+                dialog.show();
             }
         });
 
