@@ -51,6 +51,32 @@ public class TranslationActivity extends AppCompatActivity {
         this.dialog.dismiss();
     }
 
+    public void frenchRight(View v){
+        ImageButton imagebutton = (ImageButton)findViewById(R.id.destination_language_flag);
+        imagebutton.setImageResource(R.drawable.french_flag);
+        imagebutton.setAdjustViewBounds(true);
+        this.dialog.dismiss();
+
+    }
+    public void ukRight(View v){
+        ImageButton imagebutton = (ImageButton)findViewById(R.id.destination_language_flag);
+        imagebutton.setImageResource(R.drawable.uk_flag);
+        imagebutton.setAdjustViewBounds(true);
+        this.dialog.dismiss();
+    }
+    public void iranRight(View v){
+        ImageButton imagebutton = (ImageButton)findViewById(R.id.destination_language_flag);
+        imagebutton.setImageResource(R.drawable.iran_flag);
+        imagebutton.setAdjustViewBounds(true);
+        this.dialog.dismiss();
+    }
+    public void saudiRight(View v){
+        ImageButton imagebutton = (ImageButton)findViewById(R.id.destination_language_flag);
+        imagebutton.setImageResource(R.drawable.saudi_flag);
+        imagebutton.setAdjustViewBounds(true);
+        this.dialog.dismiss();
+    }
+
 
 
     protected void addListenerOnFlagButton() {
@@ -77,10 +103,18 @@ public class TranslationActivity extends AppCompatActivity {
         destination_flag_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                Toast.makeText(TranslationActivity.this,
-                        "Destination is clicked!", Toast.LENGTH_SHORT).show();
-            }
+                AlertDialog.Builder alertadd = new AlertDialog.Builder(TranslationActivity.this);
+                LayoutInflater factory = LayoutInflater.from(TranslationActivity.this);
+                final View view = factory.inflate(R.layout.alert_dialog_choice_flag_right, null);
+                alertadd.setView(view);
+                dialog = alertadd.create();
+                /*alertadd.setNeutralButton("Here!", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dlg, int sumthin) {
 
+                    }
+                });*/
+                dialog.show();
+            }
         });
 
     }

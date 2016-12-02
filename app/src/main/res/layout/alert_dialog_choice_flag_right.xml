@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <LinearLayout android:layout_weight="1" android:layout_height="fill_parent" android:layout_width="fill_parent">
+        <ImageButton android:layout_width="wrap_content"
+            android:id="@+id/alert_french_flag"
+            android:layout_height="fill_parent"
+            android:background="@drawable/french_flag"
+        android:layout_weight="1"
+            android:onClick="frenchRight"/>
+    </LinearLayout>
+    <LinearLayout android:layout_weight="1" android:layout_height="fill_parent" android:layout_width="fill_parent">
+        <ImageButton android:layout_width="fill_parent"
+            android:id="@+id/alert_uk_flag"
+            android:layout_height="fill_parent"
+            android:background="@drawable/uk_flag"
+            android:layout_weight="1"
+            android:onClick="ukRight"/>
+    </LinearLayout>
+    <LinearLayout android:layout_weight="1" android:layout_height="fill_parent" android:layout_width="fill_parent">
+        <ImageButton android:layout_width="fill_parent"
+            android:id="@+id/alert_saudi_flag"
+            android:layout_height="fill_parent"
+            android:background="@drawable/saudi_flag"
+            android:layout_weight="1"
+            android:onClick="saudiRight"/>
+    </LinearLayout>
+    <LinearLayout android:layout_weight="1" android:layout_height="fill_parent" android:layout_width="fill_parent">
+        <ImageButton android:layout_width="wrap_content"
+            android:id="@+id/alert_iran_flag"
+            android:layout_height="fill_parent"
+            android:background="@drawable/iran_flag"
+            android:layout_weight="1"
+            android:onClick="iranRight"/>
+    </LinearLayout>
+</LinearLayout>
