@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Locale;
@@ -17,6 +18,8 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity {
 
     static final int IS_BLIND_REQUEST = 1;  // The request code
+
+    private Boolean isBlind = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +66,39 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(getApplicationContext(), IsBlindActivity.class);
             startActivityForResult(intent, IS_BLIND_REQUEST);
         }
+
+        SharedPreferences isBlindPref = getSharedPreferences("isBlindPref", 0); // charge les pr�f�rences
+        isBlind = isBlindPref.getBoolean("isBlind", false);
+
+        btMap.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                TextView tvBtMap = (TextView) findViewById(R.id.tvMap);
+                String toSay = new String(tvBtMap.getText().toString());
+                TextToSpeechHelper.getInstance().say(toSay, getApplicationContext());
+                return true;
+            }
+        });
+
+        btInfos.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                TextView tvBtInfos = (TextView) findViewById(R.id.tvInfos);
+                String toSay = new String(tvBtInfos.getText().toString());
+                TextToSpeechHelper.getInstance().say(toSay, getApplicationContext());
+                return true;
+            }
+        });
+
+        btTranslation.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                TextView tvBtTranslation = (TextView) findViewById(R.id.tvTranslations);
+                String toSay = new String(tvBtTranslation.getText().toString());
+                TextToSpeechHelper.getInstance().say(toSay, getApplicationContext());
+                return true;
+            }
+        });
     }
 
     @Override
@@ -139,7 +175,12 @@ public class MainActivity extends AppCompatActivity {
             if (resultCode == RESULT_OK) {
                 //TODO On set le theme en plus gros pour les maloyants
                 boolean result = data.getBooleanExtra("result", false);
-                Toast.makeText(getApplicationContext(), result ? "blind" : "normal", Toast.LENGTH_SHORT).show();
+                SharedPreferences isBlindPref = getSharedPreferences("isBlindPref", 0); // charge les pr�f�rences
+                SharedPreferences.Editor edit = isBlindPref.edit();
+                edit.putBoolean("isBlind", result); // maintenant, elle a �t� lanc�e
+                edit.commit();
+
+                isBlind = result;
             }
         }
     }
